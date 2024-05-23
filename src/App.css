@@ -32,7 +32,7 @@ body {
 
 }
 
-.navigationbar span a{
+a{
   color: #333;
   text-decoration: none;
 }
@@ -67,18 +67,6 @@ body {
 
 }
 
-.item-left{
-  transform: translate(-120%);
-  opacity: 0;
-
-}
-
-.item-right{
-  transform: translate(120%);
-  opacity: 0;
-
-}
-
 .mainSection{
   height: 100vh;
   display: flex;
@@ -89,13 +77,14 @@ body {
 }
 
 .section-element{
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   position: relative;
   background-color: white;
   padding-inline: 100px;
+  align-items: center;
 }
 
 .main-title{
@@ -110,7 +99,7 @@ body {
 .section-title{
   font-size: 3rem;
   font-weight: 700;
-  margin-top: 0px;
+  margin-top: 100px;
   margin-bottom: 20px;
   transition: all 250ms;
   text-transform: uppercase;
@@ -135,7 +124,7 @@ body {
 .primary-button{
   padding: 15px 50px 15px 50px;
   border: none;
-  background: transparent;
+  background: #fff;
   color: #333;
   font-weight: 500;
   border: 1px solid #333;
@@ -177,8 +166,12 @@ body {
   margin-bottom: 1rem;
 }
 
-.margin-extra-small-bottom{
+.margin-small-bottom{
   margin-bottom: 20px;
+}
+
+.margin-extra-small-top{
+  margin-top: 10px;
 }
 
 .margin-small-top{
@@ -187,6 +180,17 @@ body {
 
 .margin-medium-top{
   margin-top: 40px;
+}
+
+.overflow-list{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  max-height: 500px;
 }
 
 .list{
@@ -222,4 +226,49 @@ body {
 
 .icon-img-small{
   width: 36px;
+}
+
+.icon-img-medium{
+  width: 66px;
+}
+
+.job-card{
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-card-inside-div{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+
+.job-card-inside-div h4{
+  font-size: 18px;
+}
+
+h4{
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.job-card-inside-div img{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+}
+
+.job-card-companyName{
+  font-weight: 500;
+}
+
+.date{
+  font-weight: 400;
+  color: #646464;
 }

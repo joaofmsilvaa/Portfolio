@@ -24,10 +24,12 @@ function AboutSection() {
   ];
 
   return (
-    <section id="about" className="section-element">
+    <section id="about" className="section-element about">
       <SectionTitle title={"About"} />
       <SectionDescription
-        description={"A Determined and Passionate Student and Developer"}
+        description={
+          "Learn more about my background, passions, and what drives my projects"
+        }
       />
       <div className="row">
         <div className="item-left margin-medium-top div-small">

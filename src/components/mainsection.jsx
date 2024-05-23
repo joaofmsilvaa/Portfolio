@@ -11,19 +11,19 @@ function Mainsection() {
           link={"https://github.com/joaofmsilvaa"}
           socialIconSrc={"assets/github.svg"}
           altText={"Github icon"}
-          style={"margin-extra-small-bottom"}
+          style={"margin-small-bottom"}
         />
         <Socialmedia
           link={"https://www.linkedin.com/in/jo%C3%A3o-silva-7255b3258/"}
           socialIconSrc={"assets/linkedin.svg"}
           altText={"Linkedin icon"}
-          style={"margin-extra-small-bottom"}
+          style={"margin-small-bottom"}
         />
         <Socialmedia
           link={"https://leetcode.com/u/joao7640/"}
           socialIconSrc={"assets/leetcode.svg"}
           altText={"Leetcode icon"}
-          style={"margin-extra-small-bottom"}
+          style={"margin-small-bottom"}
         />
       </div>
 
