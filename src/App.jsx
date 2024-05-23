@@ -13,7 +13,7 @@ function App() {
   useGSAP(() => {
     gsap.to(".App", { opacity: "1", duration: 0.5 });
 
-    gsap.to(".text-left", {
+    gsap.to(".item-left", {
       scrollTrigger: {
         trigger: ".section-element",
         yPercent: 100,
@@ -31,16 +31,16 @@ function App() {
     tl.from(".item-left", {
       translateX: "0%",
       opacity: 1,
-      duration: 0.8,
+      duration: 0.5,
     });
     tl.from(
       ".item-right",
       {
         translateX: "0%",
         opacity: 1,
-        duration: 0.8,
+        duration: 0.5,
       },
-      "-=0.8"
+      "-=0.5"
     );
   }, []);
 

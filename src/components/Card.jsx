@@ -4,7 +4,7 @@ function Card({ title, description, arrTags = [], classes }) {
   return (
     <div className={`card-div ${classes}`}>
       <h3 className="card-title">{title}</h3>
-      <div className="tagsList">
+      <div className="list">
         {arrTags.map((tag) => {
           return <div className="tag">{tag}</div>;
         })}

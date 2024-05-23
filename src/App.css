@@ -177,6 +177,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.margin-extra-small-bottom{
+  margin-bottom: 20px;
+}
+
 .margin-small-top{
   margin-top: 20px;
 }
@@ -185,12 +189,19 @@ body {
   margin-top: 40px;
 }
 
-.tagsList{
+.list{
   display: flex;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.list-aside{
+  position: fixed;
+  left: 0;
+  margin-left: 20px;
+  z-index: 1000;
 }
 
 .tag{
@@ -207,4 +218,8 @@ body {
   justify-content: center;
   align-items: start;
   gap: 5%;
+}
+
+.icon-img-small{
+  width: 36px;
 }
