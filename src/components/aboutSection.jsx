@@ -38,9 +38,23 @@ function AboutSection() {
             description={myDescription}
             classes={"opacity-none"}
           />
+          <div className="margin-small-top">
+            <Card title={"Skills"} arrTags={skills} />
+          </div>
         </div>
-        <div className="item-right margin-medium-top div-small">
-          <Card title={"Skills"} arrTags={skills} />
+        <div
+          className="item-right margin-medium-top div-small"
+          style={{ width: "35%" }}
+        >
+          <div
+            className="card-div"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <img
+              src="https://avatars.githubusercontent.com/u/109978656?v=4"
+              className="image-small"
+            ></img>
+          </div>
         </div>
       </div>
     </section>
