@@ -7,12 +7,32 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
+import Notification from "./components/notification";
+import ContactsSection from "./components/contactsSection";
 
 function App() {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
   useGSAP(() => {
     gsap.to(".App", { opacity: "1", duration: 0.5 });
+    let submitedParams = window.location.search
+      .substr(1)
+      .replaceAll("=", "")
+      .split("&");
+
+    if (submitedParams.length > 1) {
+      let notify = gsap.to(".notification", {
+        duration: 0.5,
+        x: "-5%",
+      });
+
+      setTimeout(() => {
+        gsap.to(".notification", {
+          duration: 0.5,
+          x: "100%",
+        });
+      }, 2000);
+    }
 
     let sections = gsap.utils.toArray(".section-element");
 
@@ -41,6 +61,19 @@ function App() {
         },
         "-=0.5"
       );
+
+      tl.to(
+        section.querySelectorAll(".item-left .tag"),
+        {
+          duration: 0.3,
+          scale: 1,
+          stagger: {
+            amount: 1.5,
+          },
+          toggleActions: "play restart play restart",
+        },
+        "0.5"
+      );
     });
 
     let socialIcons = gsap.utils.toArray(".list-aside .icon-img-small");
@@ -49,7 +82,7 @@ function App() {
       gsap.from(icon, {
         scrollTrigger: {
           start: "top 50%",
-          end: "bottom -50%",
+          end: "bottom 50%",
           trigger: ".projects",
           onEnter() {
             icon.parentElement.classList.add("reverse");
@@ -80,16 +113,31 @@ function App() {
       });
 
       tl.fromTo(project, { opacity: 0 }, { opacity: 1, duration: 0.5 });
+
+      tl.to(
+        project.querySelectorAll(".tag"),
+        {
+          duration: 0.3,
+          scale: 1,
+          stagger: {
+            amount: 0.8,
+          },
+          toggleActions: "play restart play restart",
+        },
+        "0.5"
+      );
     });
   }, []);
 
   return (
     <div className="App">
       <Navigationbar name={"João Silva"} />
+      <Notification text={"Thank you for contacting me :)"} />
       <Mainsection />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
+      <ContactsSection />
     </div>
   );
 }

@@ -230,6 +230,8 @@ a{
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
+  scale: 0;
+
 }
 
 .API:hover{
@@ -415,6 +417,82 @@ h4{
   width: 45%;
 }
 
+.width-large{
+  width: 70%;
+}
+
+.width-full{
+  width: 100%;
+}
+
 #projects:hover + .icon-img-small { 
   filter: brightness(0) invert(1);
 } 
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box-secundary{
+  padding: 10px;
+  background: #f9f9f9;
+  color: #333;
+  border-radius: 15px;
+}
+
+input, textarea {
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #f1f1f1;;
+  color: #333;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+input:focus, textarea:focus{
+  border: 1px solid rgb(68, 111, 192);
+}
+
+textarea{
+  resize: none;
+  height: 100px !important;
+}
+
+.flex-small{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label{
+  font-weight: 600;
+}
+
+form button{
+  padding: 5px;
+  background-color: #333;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  width: 35%;
+  height: 30px;
+  cursor: pointer;
+}
+
+.notification{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(15, 144, 15);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transform: translate(100%);
+}
