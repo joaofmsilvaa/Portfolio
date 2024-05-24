@@ -43,6 +43,45 @@ function App() {
         "-=0.5"
       );
     });
+
+    let socialIcons = gsap.utils.toArray(".list-aside .icon-img-small");
+
+    socialIcons.forEach((icon) => {
+      gsap.from(icon, {
+        scrollTrigger: {
+          start: "top 50%",
+          end: "bottom -50%",
+          trigger: ".projects",
+          onEnter() {
+            icon.parentElement.classList.add("reverse");
+          },
+          onLeave() {
+            icon.parentElement.classList.remove("reverse");
+          },
+          onEnterBack() {
+            icon.parentElement.classList.add("reverse");
+          },
+          onLeaveBack() {
+            icon.parentElement.classList.remove("reverse");
+          },
+        },
+      });
+    });
+
+    let projectCards = gsap.utils.toArray(".project-card");
+
+    projectCards.forEach((project) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: project,
+          start: "top 70%",
+          end: "bottom -70%",
+          toggleActions: "play reverse play reverse",
+        },
+      });
+
+      tl.fromTo(project, { opacity: 0 }, { opacity: 1, duration: 0.5 });
+    });
   }, []);
 
   return (

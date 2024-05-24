@@ -31,8 +31,8 @@ function Mainsection() {
       <SectionDescription
         description={"A Determined and Passionate Student and Developer"}
       />
-      <div className="margin-small-top">
-        <PrimaryButton text={"Projects"} />
+      <div className="margin-medium-top">
+        <PrimaryButton text={"Projects"} link="#projects" />
       </div>
     </section>
   );
