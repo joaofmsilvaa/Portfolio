@@ -63,7 +63,7 @@ function ExperienceSection() {
         </div>
         <div className="item-right margin-medium-top div-small">
           <h3 className="card-title">Academic Background</h3>
-          <div className="overflow-list">
+          <div className="list">
             {certificates.map((certificate, index) => {
               return <SimpleCard key={index} dataObject={certificate} />;
             })}

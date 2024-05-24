@@ -24,12 +24,12 @@ body {
   align-items: center;
   z-index: 1;
   position: fixed;
-  width: 100%;
   max-width: 1920px;
+  min-width: 100vw;
 }
 
 .navigationbar span{
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
   margin-left: 50px;
 
@@ -67,6 +67,8 @@ a{
   align-items: center;
   text-align: center;
   text-decoration: none;
+  font-size: 18px;
+
 
 }
 
@@ -158,13 +160,13 @@ a{
 }
 
 .card-title{
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .card-description{
-  font-size: 20px;
+  font-size: 25px;
   
 }
 
@@ -223,7 +225,7 @@ a{
 }
 
 .tag{
-  padding: 5px 10px 5px 10px;
+  padding: 10px 15px 10px 15px;
   color: white;
   background: #333;
   text-align: center;
@@ -317,7 +319,7 @@ a{
 }
 
 .icon-img-small{
-  width: 36px;
+  width: 46px;
   transition: all 250ms;
 }
 
@@ -328,7 +330,7 @@ a{
 }
 
 .icon-img-medium{
-  width: 66px;
+  width: 86px;
 }
 
 .job-card{
@@ -348,11 +350,8 @@ a{
   gap: 10px;
 }
 
-.job-card-inside-div h4{
-  font-size: 18px;
-}
-
 h4{
+  font-size: 28px !important;
   font-weight: 600;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -364,10 +363,12 @@ h4{
 }
 
 .job-card-companyName{
+  font-size: 20px;
   font-weight: 500;
 }
 
 .date{
+  font-size: 20px;
   font-weight: 400;
   color: #646464;
 }
@@ -395,7 +396,7 @@ h4{
   gap: 10px;
   justify-content: center;
   background-color: #202020;
-  padding: 20px;
+  padding: 40px;  
   opacity: 0;
 }
 
@@ -407,7 +408,7 @@ h4{
   color: #333;
   line-height: 1.7;
   margin-bottom: 1rem;
-}
+  font-size: 22px;}
 
 .reverse {
   filter: brightness(0) invert(1);
@@ -418,7 +419,7 @@ h4{
 }
 
 .width-large{
-  width: 70%;
+  width: 100%;
 }
 
 .width-full{
@@ -451,7 +452,7 @@ input, textarea {
   border-radius: 5px;
   padding: 10px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 input:focus, textarea:focus{
@@ -470,7 +471,15 @@ textarea{
   gap: 5px;
 }
 
+.flex-right{
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  flex-direction: column;
+}
+
 label{
+  font-size: 22px;
   font-weight: 600;
 }
 
@@ -480,13 +489,13 @@ form button{
   border: none;
   color: white;
   border-radius: 15px;
-  width: 35%;
-  height: 30px;
+  width: 25%;
+  height: 40px;
   cursor: pointer;
 }
 
 .notification{
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   background-color: rgb(15, 144, 15);
@@ -495,4 +504,10 @@ form button{
   border-radius: 5px;
   margin-bottom: 10px;
   transform: translate(100%);
+}
+
+@media (max-width: 1000px) {
+  .main-title{
+    font-size: 4rem;
+  }
 }

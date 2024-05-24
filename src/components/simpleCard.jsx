@@ -14,7 +14,7 @@ function SimpleCard({ dataObject }) {
         </a>
         <div>
           <h4>{dataObject.role}</h4>
-          <a href={dataObject.link} className="job-card-dataObjectName">
+          <a href={dataObject.link} className="job-card-companyName">
             {dataObject.name}
           </a>
           <div className="date">

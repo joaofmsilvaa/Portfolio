@@ -6,6 +6,7 @@ function Form() {
       <div className="width-full flex-small">
         <label htmlFor="name">Name</label>
         <input
+          required
           id="name"
           name="name"
           type="text"
@@ -15,6 +16,7 @@ function Form() {
       <div className="width-full flex-small">
         <label htmlFor="email">Email</label>
         <input
+          required
           id="email"
           name="email"
           type="email"
@@ -23,9 +25,16 @@ function Form() {
       </div>
       <div className="width-full flex-small">
         <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" placeholder="Message"></textarea>
+        <textarea
+          required
+          id="message"
+          name="message"
+          placeholder="Message"
+        ></textarea>
       </div>
-      <button type="submit">SUBMIT</button>
+      <div className="flex-right">
+        <button type="submit">SUBMIT</button>
+      </div>
     </form>
   );
 }
