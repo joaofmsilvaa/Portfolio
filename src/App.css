@@ -77,6 +77,8 @@ a{
 }
 
 .section-element{
+  padding-top: 60px;
+  padding-bottom: 60px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -99,7 +101,6 @@ a{
 .section-title{
   font-size: 3rem;
   font-weight: 700;
-  margin-top: 100px;
   margin-bottom: 20px;
   transition: all 250ms;
   text-transform: uppercase;
@@ -161,9 +162,7 @@ a{
 
 .card-description{
   font-size: 20px;
-  color: #666;
-  line-height: 1.7;
-  margin-bottom: 1rem;
+  
 }
 
 .margin-small-bottom{
@@ -182,6 +181,10 @@ a{
   margin-top: 40px;
 }
 
+.margin-large-top{
+  margin-top: 60px;
+}
+
 .overflow-list{
   display: flex;
   justify-content: start;
@@ -191,6 +194,14 @@ a{
   overflow-y: scroll;
   scrollbar-width: none;
   max-height: 500px;
+}
+
+.list-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .list{
@@ -272,3 +283,44 @@ h4{
   font-weight: 400;
   color: #646464;
 }
+
+.image-element{
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project-card{
+  border-radius: 20px;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  background-color: #202020;
+  padding: 20px;
+  opacity: 0;
+}
+
+.project-title{
+  font-size: 20px;
+}
+
+.description{
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.reverse {
+  filter: brightness(0) invert(1);
+}
+
+.width-half{
+  width: 45%;
+}
+
+#projects:hover + .icon-img-small { 
+  filter: brightness(0) invert(1);
+} 

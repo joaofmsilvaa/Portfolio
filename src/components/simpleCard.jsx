@@ -20,7 +20,7 @@ function SimpleCard({ dataObject }) {
           <div className="date">
             {dataObject.dataInicio + " - " + dataObject.dataFim}
           </div>
-          <div className="margin-extra-small-top">
+          <div className="margin-extra-small-top description">
             {dataObject.roleDescription}
           </div>
         </div>
