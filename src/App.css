@@ -1,5 +1,8 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 1920px;
+  margin: auto;
 }
 
 body {
@@ -67,6 +70,11 @@ a{
 
 }
 
+.navigationbar a{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #00000000;
+}
+
 .mainSection{
   height: 100vh;
   display: flex;
@@ -115,13 +123,6 @@ a{
   
 }
 
-.text-default{
-  width: 500px;
-  text-align: justify;
-  transform: translate(-120%);
-  transition: all 250ms;
-}
-
 .primary-button{
   padding: 15px 50px 15px 50px;
   border: none;
@@ -159,6 +160,7 @@ a{
 .card-title{
   font-size: 25px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .card-description{
@@ -222,11 +224,87 @@ a{
 
 .tag{
   padding: 5px 10px 5px 10px;
-  color: #333;
-  background: #dddddd;
+  color: white;
+  background: #333;
   text-align: center;
   border-radius: 5px;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.API:hover{
+  background: #464646;
+
+}
+
+.React:hover{
+  background-color: #5ed3f3;
+  transition: all 250ms;
+}
+
+.React-Native:hover{
+  background-color: #4cadc8;
+  transition: all 250ms;
+}
+
+.Laravel:hover{
+  background-color: #ff362b;
+  transition: all 250ms;
+}
+
+.Blade:hover{
+  background-color: #c92a21;
+  transition: all 250ms;
+}
+
+.GIT:hover{
+  background-color: #f05639;
+  transition: all 250ms;
+}
+
+.Tailwind:hover{
+  background-color: #3ebff8;
+  transition: all 250ms;
+}
+
+.HTML:hover{
+  background-color: #f16a30;
+  transition: all 250ms;
+}
+
+.CSS:hover{
+  background-color: #306af1;
+  transition: all 250ms;
+}
+
+.JavaScript:hover{
+  background-color: #ebcc37;
+  transition: all 250ms;
+}
+
+.Java:hover{
+  background-color: #ec272c;
+  transition: all 250ms;
+}
+
+.PHP:hover{
+  background-color: #7b7fb5;
+  transition: all 250ms;
+}
+
+.Wordpress:hover{
+  background-color: #28799e;
+  transition: all 250ms;
+}
+
+.Bootstrap:hover{
+  background-color: #7719f7;
+  transition: all 250ms;
+}
+
+.Sass:hover{
+  background-color: #ce6b9c;
+  transition: all 250ms;
 }
 
 .row{
@@ -238,6 +316,13 @@ a{
 
 .icon-img-small{
   width: 36px;
+  transition: all 250ms;
+}
+
+.icon-img-small:hover{
+  scale: 1.1;
+  transition: all 250ms;
+
 }
 
 .icon-img-medium{

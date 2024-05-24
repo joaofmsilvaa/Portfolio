@@ -30,27 +30,17 @@ function ProjectsSection() {
       style={{ backgroundColor: "#000", color: "#fff" }}
     >
       <SectionTitle title={"Projects"} />
-      <SectionDescription
-        description={
-          "Explore my hands-on projects, internships, and work experiences."
-        }
-      />
+      <SectionDescription description={"Explore my hands-on projects"} />
       <div className="outer">
         {projects.map((project, index) => {
-          if (index > 0) {
-            return (
-              <ProjectCard
-                key={index}
-                project={project}
-                counter={index}
-                classes="margin-large-top"
-              />
-            );
-          } else {
-            return (
-              <ProjectCard key={index} project={project} counter={index} />
-            );
-          }
+          return (
+            <ProjectCard
+              key={index}
+              project={project}
+              counter={index}
+              classes="margin-small-top"
+            />
+          );
         })}
       </div>
     </section>

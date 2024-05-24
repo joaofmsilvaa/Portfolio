@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function Tag({tag}) {
-  return (
-    <div className="tag">{tag}</div>
-  )
+function Tag({ tag }) {
+  return <div className={`tag ${tag.replaceAll(" ", "-")}`}>{tag}</div>;
 }
 
-export default Tag
+export default Tag;

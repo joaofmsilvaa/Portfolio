@@ -4,7 +4,6 @@ import AboutSection from "./components/aboutSection";
 import Mainsection from "./components/mainsection";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
