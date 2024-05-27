@@ -6,7 +6,7 @@ import Card from "./Card";
 function AboutSection() {
   const myDescription = `I'm an enthusiastic and committed university student from Portugal with a knack for crafting distinctive and impactful projects. My drive for excellence fuels my dedication to bringing unique ideas to life.
 
-  As a Computer Science student at Instituto Politécnico de Beja, I have honed a diverse skill set and deep expertise in Web development. My academic pursuits are complemented by practical experience, allowing me to seamlessly blend theory with application.`;
+  As a Computer Science student at Instituto Politécnico de Beja, I have honed a diverse skill set and deep expertise in areas such as Web development. My academic pursuits are complemented by practical experience, allowing me to seamlessly blend theory with application.`;
 
   const skills = [
     "Java",
@@ -42,10 +42,7 @@ function AboutSection() {
             <Card title={"Skills"} arrTags={skills} />
           </div>
         </div>
-        <div
-          className="item-right margin-medium-top div-small"
-          style={{ width: "35%" }}
-        >
+        <div className="item-right margin-medium-top div-small right-image">
           <div
             className="card-div"
             style={{ display: "flex", justifyContent: "center" }}

@@ -21,7 +21,7 @@ function App() {
       .split("&");
 
     if (submitedParams.length > 1) {
-      let notify = gsap.to(".notification", {
+      gsap.to(".notification", {
         duration: 0.5,
         x: "-5%",
       });
@@ -70,7 +70,7 @@ function App() {
           stagger: {
             amount: 1.5,
           },
-          toggleActions: "play restart play restart",
+          toggleActions: "play reverse play reverse",
         },
         "0.5"
       );
@@ -122,7 +122,7 @@ function App() {
           stagger: {
             amount: 0.8,
           },
-          toggleActions: "play restart play restart",
+          toggleActions: "play reverse play reverse",
         },
         "0.5"
       );
