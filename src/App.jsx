@@ -13,8 +13,12 @@ import ContactsSection from "./components/contactsSection";
 function App() {
   gsap.registerPlugin(useGSAP, ScrollTrigger);
 
+  gsap.config({
+    nullTargetWarn: false,
+  });
+
   useGSAP(() => {
-    gsap.to(".App", { opacity: "1", duration: 0.5 });
+    gsap.to("body", { opacity: "1", duration: 0.5 });
     let submitedParams = window.location.search
       .substr(1)
       .replaceAll("=", "")
@@ -42,7 +46,6 @@ function App() {
           trigger: section,
           start: "top 50%",
           end: "bottom 25%",
-          toggleActions: "play reverse play reverse",
         },
       });
 
@@ -70,7 +73,7 @@ function App() {
           stagger: {
             amount: 1.5,
           },
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none none none",
         },
         "0.5"
       );
@@ -108,7 +111,6 @@ function App() {
           trigger: project,
           start: "top 70%",
           end: "bottom -70%",
-          toggleActions: "play reverse play reverse",
         },
       });
 
@@ -122,7 +124,7 @@ function App() {
           stagger: {
             amount: 0.8,
           },
-          toggleActions: "play reverse play reverse",
+          toggleActions: "play none none none",
         },
         "0.5"
       );
