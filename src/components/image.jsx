@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function ImageElement({src, alt}) {
-  return (
-    <div>
-        <img src={src} alt={alt} className='image-element'></img>
-    </div>
-  )
+function ImageElement({ src, alt }) {
+  return <img src={src} alt={alt} className="image-element"></img>;
 }
 
-export default ImageElement
+export default ImageElement;

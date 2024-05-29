@@ -5,13 +5,14 @@ import Mainsection from "./components/mainsection";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/all";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Notification from "./components/notification";
 import ContactsSection from "./components/contactsSection";
 
 function App() {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
 
   gsap.config({
     nullTargetWarn: false,
@@ -37,6 +38,12 @@ function App() {
         });
       }, 2000);
     }
+
+    gsap.to(".main-desc", {
+      duration: 2,
+      text: "A Determined and Passionate Student and Developer",
+      ease: "none",
+    });
 
     let sections = gsap.utils.toArray(".section-element");
 

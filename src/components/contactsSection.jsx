@@ -5,7 +5,7 @@ import Form from "./Form";
 
 function ContactsSection() {
   return (
-    <section id="contact" className="section-element about">
+    <section id="contact" className="section-element contact">
       <SectionTitle title={"Contact"} />
       <SectionDescription
         description={

@@ -1,9 +1,13 @@
-import React from "react";
-import SectionTitle from "./sectionTitle";
-import SectionDescription from "./sectionDescription";
-import ProjectCard from "./projectCard";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Tag from "./Tag";
+import Socialmedia from "./socialmedia";
 
 function ProjectsSection() {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+
   const projects = [
     {
       src: "assets/reactcinema_home1.jpg",
@@ -23,25 +27,50 @@ function ProjectsSection() {
     },
   ];
 
+  const containerRef = useRef(null);
+
+  useGSAP(() => {
+    const sections = gsap.utils.toArray(".section");
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        pin: true,
+        scrub: 1,
+        snap: 1 / (sections.length - 1),
+        end: () => `+=${containerRef.current.offsetWidth}`,
+      },
+    });
+  }, []);
+
   return (
     <section
       id="projects"
-      className="section-element projects"
       style={{ backgroundColor: "#000", color: "#fff" }}
+      className="projects"
     >
-      <SectionTitle title={"Projects"} />
-      <SectionDescription description={"Explore my hands-on projects"} />
-      <div className="outer">
-        {projects.map((project, index) => {
-          return (
-            <ProjectCard
-              key={index}
-              project={project}
-              counter={index}
-              classes="margin-small-top"
-            />
-          );
-        })}
+      <div className="container projects" ref={containerRef}>
+        {projects.map((project, index) => (
+          <div className="section margin-medium-top projects" key={index}>
+            <img className="project-img" src={project.src} alt={project.title} />
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div className="list-between">
+              <div className="list">
+                {project.tags.map((tag, index) => {
+                  return <Tag key={index} tag={tag} scale={1} />;
+                })}
+              </div>
+              <Socialmedia
+                link={project.repository}
+                socialIconSrc={"assets/github.svg"}
+                altText={"Github icon"}
+                style={"reverse"}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
