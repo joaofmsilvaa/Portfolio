@@ -28,10 +28,7 @@ function Mainsection() {
       </div>
 
       <h1 className="main-title">Hello, I am João Silva</h1>
-      <SectionDescription
-        cssClasses="main-desc"
-        description={""}
-      />
+      <SectionDescription cssClasses="main-desc" description={""} />
       <div className="margin-medium-top">
         <PrimaryButton text={"Projects"} link="#projects" />
       </div>

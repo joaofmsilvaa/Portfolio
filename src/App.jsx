@@ -5,20 +5,20 @@ import Mainsection from "./components/mainsection";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { TextPlugin } from "gsap/all";
+import { TextPlugin } from "gsap/TextPlugin";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Notification from "./components/notification";
 import ContactsSection from "./components/contactsSection";
 
 function App() {
-  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
-
   gsap.config({
     nullTargetWarn: false,
   });
 
   useGSAP(() => {
+    gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
+
     gsap.to("body", { opacity: "1", duration: 0.5 });
     let submitedParams = window.location.search
       .substr(1)
@@ -39,10 +39,27 @@ function App() {
       }, 2000);
     }
 
-    gsap.to(".main-desc", {
-      duration: 2,
-      text: "A Determined and Passionate Student and Developer",
+    gsap.to("progress", {
+      value: 100,
       ease: "none",
+      scrollTrigger: {
+        trigger: "#mySection",
+        scrub: 0.3,
+      },
+    });
+
+    gsap.to(".main-desc", {
+      duration: 4,
+      text: {
+        value: "A Determined and Passionate Student and Developer",
+        ease: "none",
+        newClass: "main-desc-complete",
+        onComplete: () => {
+          setTimeout(() => {
+            document.querySelector(".main-desc").classList.toggle("main-desc");
+          }, 3500);
+        },
+      },
     });
 
     let sections = gsap.utils.toArray(".section-element");

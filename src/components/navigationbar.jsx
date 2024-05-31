@@ -83,6 +83,7 @@ export default function Navigationbar({ name = null }) {
           </li>
         </ul>
       </div>
+      <progress max="100" value="0"></progress>
     </nav>
   );
 }

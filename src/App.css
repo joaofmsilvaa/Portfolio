@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'lucon';
+  src: url('./fonts/lucon.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 1920px;
   margin: auto;
+  scrollbar-width: none;
+
 }
 
 body {
@@ -11,6 +18,39 @@ body {
   margin: auto;
   overflow-x: hidden;
   opacity: 0;
+}
+
+.main-desc{
+  font-family: 'lucon';
+  border-right: 2px solid #333;
+}
+
+.main-desc-complete{
+  font-family: 'lucon';
+  border-right: 2px solid transparent;
+}
+
+progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  border: none;
+  background: transparent;
+}
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+progress::-webkit-progress-value {
+  background: linear-gradient(to left, #fdc741,#ff6b01,#fc4236);
+  background-attachment: fixed;
+}
+progress::-moz-progress-bar {
+  background: linear-gradient(to left, #fdc741,#ff6b01,#fc4236);
+  background-attachment: fixed;
 }
 
 .container {
@@ -177,7 +217,7 @@ a{
   text-align: center;
   opacity: 1;
   transition: all 250ms;
-  
+  display: flex;
 }
 
 #contact .row{
