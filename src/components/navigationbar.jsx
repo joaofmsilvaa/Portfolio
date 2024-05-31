@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 export default function Navigationbar({ name = null }) {
   const [showNav, setShowNav] = useState(false);

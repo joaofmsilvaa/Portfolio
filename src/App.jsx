@@ -10,6 +10,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Notification from "./components/notification";
 import ContactsSection from "./components/contactsSection";
+import Tests from "./components/tests";
 
 function App() {
   gsap.config({
@@ -157,13 +158,14 @@ function App() {
 
   return (
     <div className="App">
-      <Navigationbar name={"João Silva"} />
+      <Tests />
+      {/* <Navigationbar name={"João Silva"} />
       <Notification text={"Thank you for contacting me :)"} />
       <Mainsection />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
-      <ContactsSection />
+      <ContactsSection /> */}
     </div>
   );
 }
