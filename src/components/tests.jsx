@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { Draggable } from "gsap/Draggable";
 import { Observer } from "gsap/Observer";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
 function Tests() {
   gsap.config({
     nullTargetWarn: false,
@@ -13,8 +15,16 @@ function Tests() {
   let restart = useRef();
   let pause = useRef();
   let myDiv = useRef();
+  let linkBtn = useRef();
 
-  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin, Draggable, Observer);
+  gsap.registerPlugin(
+    useGSAP,
+    ScrollTrigger,
+    TextPlugin,
+    Draggable,
+    Observer,
+    ScrollToPlugin
+  );
   useGSAP((context, contextSafe) => {
     let tl = gsap.timeline();
 
@@ -64,6 +74,14 @@ function Tests() {
     });
   });
 
+  useGSAP((context, contextSafe) => {
+    let scrollToBigDiv = contextSafe(() => {
+      gsap.to(window, { duration: 1, scrollTo: "#bigDiv", ease: "power2" });
+    });
+
+    linkBtn.current.addEventListener("click", scrollToBigDiv);
+  });
+
   return (
     <div>
       <div style={{ position: "fixed" }}>
@@ -73,6 +91,7 @@ function Tests() {
         <button id="gsap-pause" className="gsap-pause" ref={pause}>
           Pause
         </button>
+        <a ref={linkBtn}>go to big div</a>
       </div>
 
       <div className="box gradient-red red"></div>
@@ -91,6 +110,7 @@ function Tests() {
       </div>
 
       <div
+        id="bigDiv"
         style={{
           height: "100vh",
           display: "flex",
