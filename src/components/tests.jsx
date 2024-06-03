@@ -4,28 +4,31 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { Draggable } from "gsap/Draggable";
-
+import { Observer } from "gsap/Observer";
 function Tests() {
-  let [scaleValue, setScaleValue] = useState(1);
-
   gsap.config({
     nullTargetWarn: false,
   });
 
   let restart = useRef();
   let pause = useRef();
-  let scale = useRef();
+  let myDiv = useRef();
 
-  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin, Draggable);
-
+  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin, Draggable, Observer);
   useGSAP((context, contextSafe) => {
     let tl = gsap.timeline();
 
-    tl.to(".green", { rotation: 360, x: 100, y: 200, duration: 1, delay: 1 });
+    tl.to(".green", {
+      rotation: 360,
+      x: 100,
+      y: 200,
+      duration: 1,
+      delay: 1,
+    });
     tl.to(".purple", { rotation: 360, x: 100, y: 250, duration: 1 });
     tl.to(".blue", { rotation: 360, x: 100, y: 300, duration: 1 }, "-=0.5");
 
-    let longTl = gsap.timeline().to(".red", { x: 400, duration: 10 });
+    gsap.timeline().to(".red", { x: 400, duration: 10 });
 
     restart = contextSafe(() => {
       tl.restart();
@@ -33,11 +36,6 @@ function Tests() {
 
     pause = contextSafe(() => {
       tl.pause();
-    });
-
-    scale = contextSafe(() => {
-      longTl.timeScale(scaleValue);
-      setScaleValue(scaleValue++);
     });
 
     gsap.fromTo(
@@ -53,20 +51,29 @@ function Tests() {
 
     document.getElementById("gsap-restart").addEventListener("click", restart);
     document.getElementById("gsap-pause").addEventListener("click", pause);
-    document.getElementById("gsap-scale").addEventListener("click", scale);
-  }, []);
+  });
+
+  useGSAP(() => {
+    let div = myDiv.current;
+
+    Observer.create({
+      target: window,
+      type: "wheel,touch,scroll,pointer",
+      onUp: () => div.classList.add("box2"),
+      onDown: () => div.classList.remove("box2"),
+    });
+  });
 
   return (
-    <div style={{ height: "100vh", padding: 20 }}>
-      <button id="gsap-restart" className="gsap-restart" ref={restart}>
-        Restart
-      </button>
-      <button id="gsap-pause" className="gsap-pause" ref={pause}>
-        Pause
-      </button>
-      <button id="gsap-scale" className="gsap-scale" ref={scale}>
-        Timescale ( {scaleValue} )
-      </button>
+    <div>
+      <div style={{ position: "fixed" }}>
+        <button id="gsap-restart" className="gsap-restart" ref={restart}>
+          Restart
+        </button>
+        <button id="gsap-pause" className="gsap-pause" ref={pause}>
+          Pause
+        </button>
+      </div>
 
       <div className="box gradient-red red"></div>
       <div className="box gradient-orange orange"></div>
@@ -81,6 +88,17 @@ function Tests() {
         <div className="wrapper">
           <div className="flair flair--2"></div>
         </div>
+      </div>
+
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "start",
+          alignItems: "center",
+        }}
+      >
+        <div ref={myDiv} className="box box2"></div>
       </div>
 
       <div className="box gradient-green green"></div>

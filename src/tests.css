@@ -392,6 +392,33 @@
     border-radius: 9px;
     border: solid 2px var(--mid);
   }
+
+  .group {
+    width: 740px;
+    height: auto;
+    margin: 1rem auto;
+    padding: 4px;
+   border: solid 2px var(--color-surface-white);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: var(--color-just-black);
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  .box {
+    margin: 4px;
+    padding: 8px;
+    line-height: 28px;
+    border-radius: 10px;
+    transition: all 250ms;
+
+  }
+
+  .group.reorder {
+    flex-direction: row;
+  }
   
   /* colors */
   
@@ -967,4 +994,10 @@
     background: url('https://assets.codepen.io/16327/noise-e82662fe.png');
     opacity: 0.4;
     pointer-events: none;
+  }
+
+  .box2{
+    border-radius: 0px 50px 0px 50px !important;
+    background-color: rgb(255, 230, 0);
+    transition: all 250ms;
   }
