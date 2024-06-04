@@ -1,11 +1,51 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 export default function Navigationbar({ name = null }) {
+  gsap.registerPlugin(useGSAP, ScrollToPlugin);
+
+  const home = useRef();
+  const about = useRef();
+  const experience = useRef();
+  const projects = useRef();
+  const contact = useRef();
+
+  const links = {
+    home: "#home",
+    about: "#about",
+    experience: "#experience",
+    projects: "#projects",
+    contacts: "#contacts",
+  };
+
   const [showNav, setShowNav] = useState(false);
 
   const show = !showNav
     ? { height: "0px", overflow: "hidden" }
     : { height: "100%", overflow: "hidden", transition: "all 150ms" };
+
+  useGSAP((context, contextSafe) => {
+    let scrollToSection = (section) =>
+      contextSafe(() => {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: links[section],
+          ease: "power2",
+        });
+      });
+
+    home.current.addEventListener("click", scrollToSection("home"));
+
+    about.current.addEventListener("click", scrollToSection("about"));
+
+    experience.current.addEventListener("click", scrollToSection("experience"));
+
+    projects.current.addEventListener("click", scrollToSection("projects"));
+
+    contact.current.addEventListener("click", scrollToSection("contacts"));
+  });
 
   return (
     <nav>
@@ -26,19 +66,19 @@ export default function Navigationbar({ name = null }) {
           ></img>
           <ul>
             <li>
-              <a href="#home">HOME</a>
+              <a ref={home}>HOME</a>
             </li>
             <li>
-              <a href="#about">ABOUT</a>
+              <a ref={about}>ABOUT</a>
             </li>
             <li>
-              <a href="#experience">EXPERIENCE</a>
+              <a ref={experience}>EXPERIENCE</a>
             </li>
             <li>
-              <a href="#projects">PROJECTS</a>
+              <a ref={projects}>PROJECTS</a>
             </li>
             <li>
-              <a href="#contact">CONTACT</a>
+              <a ref={contact}>CONTACT</a>
             </li>
           </ul>
         </div>
