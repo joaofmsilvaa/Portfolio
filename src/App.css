@@ -58,10 +58,11 @@ progress::-moz-progress-bar {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  max-width: 1920px;
 }
 
 .section {
-  min-width: 100vw;
+  min-width: 95vw;
   height: 100vh;
   display: flex;
   flex-direction: column;

@@ -158,14 +158,14 @@ function App() {
 
   return (
     <div className="App">
-      <Tests />
-      {/* <Navigationbar name={"João Silva"} />
+      {/*<Tests />*/}
+      <Navigationbar name={"João Silva"} />
       <Notification text={"Thank you for contacting me :)"} />
       <Mainsection />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
-      <ContactsSection /> */}
+      <ContactsSection />
     </div>
   );
 }

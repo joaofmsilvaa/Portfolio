@@ -53,7 +53,11 @@ function ProjectsSection() {
       <div className="container projects" ref={containerRef}>
         {projects.map((project, index) => (
           <div className="section margin-medium-top projects" key={index}>
-            <img className="project-img" src={project.src} alt={project.title} />
+            <img
+              className="project-img"
+              src={project.src}
+              alt={project.title}
+            />
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <div className="list-between">

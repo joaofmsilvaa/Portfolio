@@ -28,7 +28,7 @@ function AboutSection() {
       <SectionTitle title={"About"} />
       <SectionDescription
         description={
-          "Learn more about my background, passions, and what drives my projects"
+          "Learn more about my background, passions and what drives my projects"
         }
       />
       <div className="row">
