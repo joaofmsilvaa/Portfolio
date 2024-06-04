@@ -520,6 +520,8 @@ h4{
   line-height: 1.7;
   margin-bottom: 1rem;
   font-size: 22px;
+  width: 95%;
+
 }
 
 .scroll-title{
@@ -778,8 +780,8 @@ form button{
   }
   
   .section-description{
-    font-size: 18px;
-    width: 85%;
+    font-size: 16px;
+    width: fit-content;
   }
 
   .primary-button{
