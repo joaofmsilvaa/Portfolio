@@ -62,14 +62,15 @@ progress::-moz-progress-bar {
 }
 
 .section {
-  min-width: 95vw;
+  min-width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  padding: 20px;
+  padding-inline: 20px;
+
 }
 
 .section h3 {
@@ -80,7 +81,6 @@ progress::-moz-progress-bar {
 .section .project-img {
   max-width: 50%;
   height: auto;
-  margin-bottom: 20px;
 }
 
 .section p {
