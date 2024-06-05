@@ -131,6 +131,22 @@ nav{
 
 }
 
+.hide-x{
+  overflow-x: hidden;
+}
+
+.translate-100{
+  transform: translate(-100%);
+}
+
+.opacity-none{
+  opacity: 0
+}
+
+form{
+  padding: 15px;
+}
+
 a{
   color: #333;
   text-decoration: none;
