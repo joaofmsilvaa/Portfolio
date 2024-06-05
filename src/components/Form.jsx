@@ -2,8 +2,13 @@ import React from "react";
 
 function Form() {
   return (
-    <form action="/">
-      <div className="width-full flex-small">
+    <form
+      action="/"
+      className="hide-x"
+    >
+      <div
+        className="width-full flex-small input-field translate-100 opacity-none"
+      >
         <label htmlFor="name">Name</label>
         <input
           required
@@ -13,7 +18,9 @@ function Form() {
           placeholder="Enter your name"
         />
       </div>
-      <div className="width-full flex-small">
+      <div
+        className="width-full flex-small input-field translate-100 opacity-none"
+      >
         <label htmlFor="email">Email</label>
         <input
           required
@@ -23,7 +30,9 @@ function Form() {
           placeholder="Enter your email"
         />
       </div>
-      <div className="width-full flex-small">
+      <div
+        className="width-full flex-small input-field translate-100 opacity-none"
+      >
         <label htmlFor="message">Message</label>
         <textarea
           required
