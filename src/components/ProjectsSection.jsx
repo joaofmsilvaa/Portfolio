@@ -6,7 +6,10 @@ import Tag from "./Tag";
 import Socialmedia from "./socialmedia";
 
 function ProjectsSection() {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  gsap.config({
+    nullTargetWarn: false,
+  });
+
 
   const projects = [
     {
@@ -30,6 +33,8 @@ function ProjectsSection() {
   const containerRef = useRef(null);
 
   useGSAP(() => {
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+
     const sections = gsap.utils.toArray(".section");
     gsap.to(sections, {
       xPercent: -100 * (sections.length - 1),

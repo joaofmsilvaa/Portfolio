@@ -4,7 +4,9 @@ import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 export default function Navigationbar({ name = null }) {
-  gsap.registerPlugin(useGSAP, ScrollToPlugin);
+  gsap.config({
+    nullTargetWarn: false,
+  });
 
   const home = useRef();
   const about = useRef();
@@ -27,6 +29,8 @@ export default function Navigationbar({ name = null }) {
     : { height: "100%", overflow: "hidden", transition: "all 150ms" };
 
   useGSAP((context, contextSafe) => {
+    gsap.registerPlugin(useGSAP, ScrollToPlugin);
+
     let scrollToSection = (section) =>
       contextSafe(() => {
         gsap.to(window, {

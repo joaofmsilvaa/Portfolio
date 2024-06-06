@@ -7,9 +7,14 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ContactsSection() {
-  gsap.registerPlugin(useGSAP, ScrollTrigger);
+  gsap.config({
+    nullTargetWarn: false,
+  });
+
 
   useGSAP(() => {
+    gsap.registerPlugin(useGSAP, ScrollTrigger);
+
     let tl = gsap.timeline();
 
     tl = gsap.timeline({
@@ -40,8 +45,7 @@ function ContactsSection() {
         }
       />
       <div className="row width-large margin-small-top">
-        <div
-          className="box-secundary width-full">
+        <div className="box-secundary width-full">
           <Form />
         </div>
       </div>

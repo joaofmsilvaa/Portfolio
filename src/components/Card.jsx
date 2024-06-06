@@ -5,14 +5,13 @@ function Card({ title, description, arrTags = [], classes }) {
   return (
     <div className={`card-div ${classes}`}>
       <h3 className="card-title">{title}</h3>
-      <div className="list">
-        {arrTags.map((tag, index) => {
-          return <Tag key={index} tag={tag}/>;
-        })}
-      </div>
       <div>
         <div className="card-description description">{description}</div>
-
+      </div>
+      <div className="list">
+        {arrTags.map((tag, index) => {
+          return <Tag key={index} tag={tag} />;
+        })}
       </div>
     </div>
   );

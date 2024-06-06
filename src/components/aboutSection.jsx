@@ -33,11 +33,7 @@ function AboutSection() {
       />
       <div className="row">
         <div className="item-left margin-medium-top div-small">
-          <Card
-            title={"Get to know me"}
-            description={myDescription}
-            classes={"opacity-none"}
-          />
+          <Card title={"Get to know me"} description={myDescription} />
           <div className="margin-small-top">
             <Card title={"Skills"} arrTags={skills} />
           </div>
