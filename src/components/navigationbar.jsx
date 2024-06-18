@@ -54,9 +54,17 @@ export default function Navigationbar({ name = null }) {
   return (
     <nav>
       <div className="navigationbar">
-        <div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <span>
-            <a href="/">{name.toUpperCase()}</a>
+            <a href="/">
+              <img src="/assets/js-removebg-preview.svg" alt="logo"></img>
+            </a>
           </span>
         </div>
 

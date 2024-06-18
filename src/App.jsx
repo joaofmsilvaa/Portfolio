@@ -157,7 +157,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navigationbar name={"João Silva"} />
+      <Navigationbar/>
       <Notification text={"Thank you for contacting me :)"} />
       <Mainsection />
       <AboutSection />
