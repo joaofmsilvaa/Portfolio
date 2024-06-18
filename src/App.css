@@ -774,6 +774,10 @@ form button{
     font-size: 3rem;
   }
 
+  .navigationbar{
+    margin-top: 10px;
+  }
+
   .navigationbar span{
     font-size: 20px;
     margin-left: 15px;

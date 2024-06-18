@@ -53,6 +53,8 @@ export default function Navigationbar({ name = null }) {
 
   return (
     <nav>
+      <progress max="100" value="0"></progress>
+
       <div className="navigationbar">
         <div
           style={{
@@ -135,7 +137,6 @@ export default function Navigationbar({ name = null }) {
           </li>
         </ul>
       </div>
-      <progress max="100" value="0"></progress>
     </nav>
   );
 }

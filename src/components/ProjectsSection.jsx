@@ -10,7 +10,6 @@ function ProjectsSection() {
     nullTargetWarn: false,
   });
 
-
   const projects = [
     {
       src: "assets/reactcinema_home1.jpg",
@@ -24,7 +23,7 @@ function ProjectsSection() {
       src: "assets/home_pc.jpg",
       title: "Bodyboost",
       description:
-        "A commercial website used to promote the 'BodyBoost' application developed in the school environment. The website has meals and news pages, both paginated and filtered, as well as an API documentation page and an admin dashboard.",
+        "A commercial website used to promote the 'BodyBoost' app focused on meals, news and promoting a healthy lifestyle",
       tags: ["Laravel", "Blade", "Tailwind", "API", "GIT"],
       repository: "https://github.com/joaofmsilvaa/BodyBoost-Android-App",
     },
