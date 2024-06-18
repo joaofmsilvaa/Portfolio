@@ -9,8 +9,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Notification from "./components/notification";
-import ContactsSection from "./components/contactsSection";
-import Tests from "./components/tests";
+import Footer from "./components/footer";
 
 function App() {
   gsap.config({
@@ -158,14 +157,13 @@ function App() {
 
   return (
     <div className="App">
-      {/*<Tests />*/}
       <Navigationbar name={"João Silva"} />
       <Notification text={"Thank you for contacting me :)"} />
       <Mainsection />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
-      <ContactsSection />
+      <Footer />
     </div>
   );
 }
