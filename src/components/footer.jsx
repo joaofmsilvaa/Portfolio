@@ -9,7 +9,7 @@ export default function Footer() {
       </div>
       <div className="emailDiv">
         <div className="emailImgDiv">
-          <img src="assets/email-svgrepo-com.svg" alt="email logo"></img>
+          <img src="/assets/email-svgrepo-com.svg" alt="email logo"></img>
         </div>
         <span className="email">joaosilva.contacts@gmail.com</span>
       </div>

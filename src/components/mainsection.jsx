@@ -9,19 +9,19 @@ function Mainsection() {
       <div className="list-aside">
         <Socialmedia
           link={"https://github.com/joaofmsilvaa"}
-          socialIconSrc={"assets/github.svg"}
+          socialIconSrc={"/assets/github.svg"}
           altText={"Github icon"}
           style={"margin-small-bottom"}
         />
         <Socialmedia
           link={"https://www.linkedin.com/in/jo%C3%A3o-silva-7255b3258/"}
-          socialIconSrc={"assets/linkedin.svg"}
+          socialIconSrc={"/assets/linkedin.svg"}
           altText={"Linkedin icon"}
           style={"margin-small-bottom"}
         />
         <Socialmedia
           link={"https://leetcode.com/u/joao7640/"}
-          socialIconSrc={"assets/leetcode.svg"}
+          socialIconSrc={"/assets/leetcode.svg"}
           altText={"Leetcode icon"}
           style={"margin-small-bottom"}
         />

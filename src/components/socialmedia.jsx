@@ -1,6 +1,6 @@
 import React from "react";
 
-function Socialmedia({ socialIconSrc, altText, link, style }) {
+function Socialmedia({ socialIconSrc, altText, link, style = "" }) {
   return (
     <div className={style}>
       <a href={link} target="_blank">

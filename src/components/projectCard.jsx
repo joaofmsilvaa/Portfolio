@@ -20,7 +20,7 @@ function ProjectCard({ project, classes = "", counter }) {
           </div>
           <Socialmedia
             link={project.repository}
-            socialIconSrc={"assets/github.svg"}
+            socialIconSrc={"/assets/github.svg"}
             altText={"Github icon"}
             style={"reverse"}
           />

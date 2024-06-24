@@ -2,13 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // import "./tests.css";
 import "./index.css";
-import App from "./App";
+import App from "./components/Pages/App";
 import reportWebVitals from "./reportWebVitals";
+import Root from "./components/root";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Root />
   </React.StrictMode>
 );
 

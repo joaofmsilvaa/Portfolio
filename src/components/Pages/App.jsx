@@ -1,17 +1,18 @@
-import "./App.css";
-import Navigationbar from "./components/navigationbar";
-import AboutSection from "./components/aboutSection";
-import Mainsection from "./components/mainsection";
+import "../../App.css";
+import Navigationbar from "../navigationbar";
+import AboutSection from "../aboutSection";
+import Mainsection from "../mainsection";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
-import ExperienceSection from "./components/ExperienceSection";
-import ProjectsSection from "./components/ProjectsSection";
-import Notification from "./components/notification";
-import Footer from "./components/footer";
+import ExperienceSection from "../ExperienceSection";
+import ProjectsSection from "../ProjectsSection";
+import Notification from "../notification";
+import Footer from "../footer";
+import React from "react";
 
-function App() {
+export default function Home() {
   gsap.config({
     nullTargetWarn: false,
   });
@@ -156,8 +157,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Navigationbar/>
+    <div>
+      <Navigationbar />
       <Notification text={"Thank you for contacting me :)"} />
       <Mainsection />
       <AboutSection />
@@ -167,5 +168,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

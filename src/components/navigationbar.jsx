@@ -8,19 +8,6 @@ export default function Navigationbar({ name = null }) {
     nullTargetWarn: false,
   });
 
-  const home = useRef();
-  const about = useRef();
-  const experience = useRef();
-  const projects = useRef();
-  const contact = useRef();
-
-  const links = {
-    home: "#home",
-    about: "#about",
-    experience: "#experience",
-    projects: "#projects",
-    contacts: "#contacts",
-  };
 
   const [showNav, setShowNav] = useState(false);
 
@@ -28,28 +15,6 @@ export default function Navigationbar({ name = null }) {
     ? { height: "0px", overflow: "hidden" }
     : { height: "100%", overflow: "hidden", transition: "all 150ms" };
 
-  useGSAP((context, contextSafe) => {
-    gsap.registerPlugin(useGSAP, ScrollToPlugin);
-
-    let scrollToSection = (section) =>
-      contextSafe(() => {
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: links[section],
-          ease: "power2",
-        });
-      });
-
-    home.current.addEventListener("click", scrollToSection("home"));
-
-    about.current.addEventListener("click", scrollToSection("about"));
-
-    experience.current.addEventListener("click", scrollToSection("experience"));
-
-    projects.current.addEventListener("click", scrollToSection("projects"));
-
-    contact.current.addEventListener("click", scrollToSection("contacts"));
-  });
 
   return (
     <nav>
@@ -75,24 +40,24 @@ export default function Navigationbar({ name = null }) {
             onClick={() => {
               setShowNav(!showNav);
             }}
-            src="assets/burger-icon.svg"
+            src="/assets/burger-icon.svg"
             className="burger-icon"
           ></img>
           <ul>
             <li>
-              <a ref={home}>HOME</a>
+              <a href="/#home">HOME</a>
             </li>
             <li>
-              <a ref={about}>ABOUT</a>
+              <a href="/#about">ABOUT</a>
             </li>
             <li>
-              <a ref={experience}>EXPERIENCE</a>
+              <a href="/#experience">EXPERIENCE</a>
             </li>
             <li>
-              <a ref={projects}>PROJECTS</a>
+              <a href="/#projects">PROJECTS</a>
             </li>
             <li>
-              <a ref={contact}>CONTACT</a>
+              <a href="/#contact">CONTACT</a>
             </li>
           </ul>
         </div>

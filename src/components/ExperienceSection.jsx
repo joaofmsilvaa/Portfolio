@@ -7,7 +7,7 @@ function ExperienceSection() {
   const experience = [
     {
       name: "Mindshaker",
-      logo: "assets/mindshakerlogo.png",
+      logo: "/assets/mindshakerlogo.png",
       link: "https://mindshaker.com",
       role: "Intern",
       roleDescription:
@@ -20,7 +20,7 @@ function ExperienceSection() {
   const certificates = [
     {
       name: "Escola Superior de Tecnologia e Gestão - Instituto Politécnico de Beja",
-      logo: "assets/IPBeja.jpg",
+      logo: "/assets/IPBeja.jpg",
       link: "https://www.ipbeja.pt/UnidadesOrganicas/ESTIG/Paginas/default.aspx",
       role: "Higher Technical Professional Course in Web Technologies and Mobile Devices",
       roleDescription:
@@ -30,7 +30,7 @@ function ExperienceSection() {
     },
     {
       name: "IEFP - Centro de Emprego e Formação de Beja",
-      logo: "assets/iefplogo.jpg",
+      logo: "/assets/iefplogo.jpg",
       link: "https://www.iefp.pt/",
       role: "Network and IT Systems Management",
       roleDescription:
