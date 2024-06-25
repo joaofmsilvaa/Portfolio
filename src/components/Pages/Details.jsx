@@ -69,7 +69,7 @@ export default function Details() {
             <h1 className="details-title">{project.title}</h1>
             <div className="details-description">{project.excerpt}</div>
             <div className="details-description">{project.description}</div>
-            <div className="list-between">
+            <div className="list-center">
               <div className="list">
                 {project.tags.map((tag, index) => {
                   return <Tag scale={1} key={index} tag={tag} />;

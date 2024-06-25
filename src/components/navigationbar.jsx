@@ -8,13 +8,11 @@ export default function Navigationbar({ name = null }) {
     nullTargetWarn: false,
   });
 
-
   const [showNav, setShowNav] = useState(false);
 
   const show = !showNav
     ? { height: "0px", overflow: "hidden" }
     : { height: "100%", overflow: "hidden", transition: "all 150ms" };
-
 
   return (
     <nav>
@@ -70,35 +68,35 @@ export default function Navigationbar({ name = null }) {
               setShowNav(false);
             }}
           >
-            <a href="#home">HOME</a>
+            <a href="/#home">HOME</a>
           </li>
           <li
             onClick={() => {
               setShowNav(false);
             }}
           >
-            <a href="#about">ABOUT</a>
+            <a href="/#about">ABOUT</a>
           </li>
           <li
             onClick={() => {
               setShowNav(false);
             }}
           >
-            <a href="#experience">EXPERIENCE</a>
+            <a href="/#experience">EXPERIENCE</a>
           </li>
           <li
             onClick={() => {
               setShowNav(false);
             }}
           >
-            <a href="#projects">PROJECTS</a>
+            <a href="/#projects">PROJECTS</a>
           </li>
           <li
             onClick={() => {
               setShowNav(false);
             }}
           >
-            <a href="#contact">CONTACT</a>
+            <a href="/#contact">CONTACT</a>
           </li>
         </ul>
       </div>

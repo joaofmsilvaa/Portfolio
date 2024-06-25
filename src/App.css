@@ -752,7 +752,8 @@ form button{
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-
+  max-width: 90%;
+  margin-inline: auto;
 }
 
 @media (max-width: 1000px) {
@@ -856,6 +857,10 @@ form button{
 }
 
 @media (max-width: 680px){
+
+  .section .project-img {
+    max-width: 80%;
+  }
 
   .mobileDiv{
     list-style: none;
