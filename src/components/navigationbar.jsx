@@ -55,7 +55,7 @@ export default function Navigationbar({ name = null }) {
               <a href="/#projects">PROJECTS</a>
             </li>
             <li>
-              <a href="/#contact">CONTACT</a>
+              <a href="/#contacts">CONTACT</a>
             </li>
           </ul>
         </div>
