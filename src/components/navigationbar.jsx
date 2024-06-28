@@ -96,7 +96,7 @@ export default function Navigationbar({ name = null }) {
               setShowNav(false);
             }}
           >
-            <a href="/#contact">CONTACT</a>
+            <a href="/#contacts">CONTACT</a>
           </li>
         </ul>
       </div>
