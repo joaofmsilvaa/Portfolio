@@ -48,7 +48,7 @@ function ExperienceSection() {
     >
       <SectionTitle title={"Experience"} />
       <SectionDescription
-        description={"Explore my internships, and work experiences"}
+        description={"Explore my academic background, and work experience"}
       />
       <div className="row">
         <div className="item-left margin-medium-top div-small">
