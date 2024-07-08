@@ -21,6 +21,8 @@ function AboutSection() {
     "PHP",
     "Wordpress",
     "Laravel",
+    "NextJS",
+    "GSAP",
   ];
 
   return (

@@ -400,6 +400,16 @@ a{
   transition: all 250ms;
 }
 
+.NextJS:hover{
+  background-color: #000;
+  transition: all 250ms;
+}
+
+.GSAP:hover{
+  background-color: #0ae448;
+  transition: all 250ms;
+}
+
 .React-Native:hover{
   background-color: #4cadc8;
   transition: all 250ms;
@@ -857,6 +867,15 @@ form button{
 }
 
 @media (max-width: 680px){
+
+  .details-title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    transition: all .25s;
+    text-align: center;
+  }
 
   .section .project-img {
     max-width: 80%;
