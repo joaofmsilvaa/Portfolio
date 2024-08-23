@@ -13,7 +13,7 @@ function ExperienceSection() {
       roleDescription:
         "During my internship, I learned various front-end and back-end web development technologies, as well as working methodologies such as autonomy and collaboration.",
       dataInicio: "February of 2024",
-      dataFim: "The moment",
+      dataFim: "July of 2024",
     },
   ];
 
@@ -26,7 +26,7 @@ function ExperienceSection() {
       roleDescription:
         "In this course I learned how to develop websites and web applications using languages used in the front-end and back-end following UX and UI standards, as well as the basics of computer networks and object-oriented programming.",
       dataInicio: "September of 2022",
-      dataFim: "The moment",
+      dataFim: "July of 2024",
     },
     {
       name: "IEFP - Centro de Emprego e Formação de Beja",

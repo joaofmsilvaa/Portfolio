@@ -11,6 +11,7 @@ import ProjectsSection from "../ProjectsSection";
 import Notification from "../notification";
 import Footer from "../footer";
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   gsap.config({
@@ -57,7 +58,7 @@ export default function Home() {
         newClass: "main-desc-complete",
         onComplete: () => {
           setTimeout(() => {
-            document.querySelector(".main-desc").classList.toggle("main-desc");
+            document.querySelector(".main-desc-complete").classList.toggle("main-desc");
           }, 3500);
         },
       },
@@ -165,6 +166,7 @@ export default function Home() {
       <ExperienceSection />
       <ProjectsSection />
       <Footer />
+      <Analytics />
     </div>
   );
 }
